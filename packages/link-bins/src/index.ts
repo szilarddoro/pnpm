@@ -209,7 +209,6 @@ async function linkBin (cmd: CommandInfo, binsDir: string, opts?: LinkBinOptions
   try {
     await cmdShim(cmd.path, externalBinPath, {
       createPwshFile: cmd.makePowerShellShim,
-      nodePath: opts?.extraNodePaths,
       nodeExecPath: cmd.nodeExecPath,
     })
   } catch (err: any) { // eslint-disable-line
